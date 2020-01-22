@@ -225,6 +225,8 @@ var parseBarcode = (function () {
                 elementToReturn = new ParsedElement(ai, title, "S");
                 var offSet = ai.length;
                 elementToReturn.data = codestring.slice(offSet, length + offSet);
+                if(elementToReturn.data.length != length)
+                    throw "37";
                 codestringToReturn = codestring.slice(length + offSet, codestringLength);
             }
 
@@ -1350,6 +1352,8 @@ var parseBarcode = (function () {
                     throw "invalid day in date";
                 case "36":
                     throw "invalid number";
+                case "37":
+                    throw "invalid length";
                 default:
                     throw "unknown error";
                 }
