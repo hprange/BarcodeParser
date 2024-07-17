@@ -14,7 +14,7 @@
  *
  * encapsulating the barcode parsing function in an anonymous, self-executing function
  */
-var parseBarcode = (function () {
+const parseBarcode = (function () {
     'use strict';
     /**
      * This is the main routine provided by the parseBarcode library. It takes a string,
@@ -1363,3 +1363,5 @@ var parseBarcode = (function () {
     }
     return parseBarcode;
 }());
+
+export default parseBarcode;
